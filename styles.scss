@@ -1,0 +1,208 @@
+@import './variables';
+@import './utils';
+@import './button';
+@import './function';
+@import './mixin';
+@import './each';
+@import './reset';
+
+.showcase {
+  @include setBackground($primaryColor);
+  height: 600px;
+
+  nav {
+    @include set-flex-center(row);
+    justify-content: space-between;
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 15px;
+    }
+  }
+
+  a {
+    color: settingTextColor($primaryColor);
+  }
+
+  a:hover {
+    color: yellow;
+  }
+
+  &-content {
+    @include set-flex-center(row);
+    height: 100%;
+
+    img {
+      margin: 15px;
+      width: 50%;
+      border-radius: 10%;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.2;
+    }
+    p {
+      margin: 20px 0;
+    }
+  }
+}
+
+section h3 {
+  margin-top: 100px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  // & p {
+  //   text-align: center;
+  // }
+}
+section.middle h4 {
+  text-align: center;
+}
+
+.container-card {
+  @include set-flex-center(row);
+  justify-content: space-around;
+  margin: 30px;
+
+  & img {
+    @include center-image();
+    border-radius: 50%;
+  }
+
+  & ul {
+    display: flex;
+  }
+
+  & ul li a i.fa-facebook {
+    color: $facebookColor;
+  }
+
+  & ul li a i.fa-youtube {
+    color: $youtubeColor;
+    margin-left: 10px;
+  }
+
+  & .card h2 {
+    padding: 0px 20px;
+    text-align: center;
+  }
+  & .card {
+    margin-top: 20px;
+  }
+}
+
+button.join {
+  padding: 15px 30px 15px 30px;
+  font-size: 1.375rem;
+  width: 300px;
+  max-width: 100%;
+  color: #fff !important;
+  background-color: $iconColor;
+  border: 1px solid transparent;
+  border-color: $iconColor;
+  border-radius: 50px;
+  font-weight: 500;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  display: flex;
+
+  & h3 {
+    position: relative;
+    left: 25%;
+  }
+  &:hover {
+    background-color: $facebookColor;
+  }
+}
+.join {
+  margin: 100px auto;
+}
+section.last {
+  background-color: $primaryColor;
+  padding: 70px;
+}
+section .last-para {
+  @include set-flex-center(coloumn);
+  justify-content: space-evenly;
+
+  li {
+    color: white;
+    font-size: 15px;
+  }
+  li a {
+    color: white;
+  }
+  li:first-child {
+    font-size: 25px;
+    cursor: none;
+  }
+  img {
+    position: relative;
+    left: 10%;
+  }
+}
+footer {
+  text-align: center;
+  font-size: 10px;
+}
+.contact-header {
+  @include set-flex-center(column);
+
+  & h3 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+}
+.contact-us {
+  @include set-flex-center(row);
+  justify-content: space-evenly;
+  margin: 100px auto;
+
+  & .info div {
+    display: flex;
+  }
+  & .info i {
+    color: $iconColor;
+  }
+
+  & .info p {
+    padding: 0 0 10px 50px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    font-size: 14px;
+  }
+
+  & .info .social-links a i {
+    color: black;
+    padding: 0px 5px 0px 5px;
+  }
+
+  & .form div input {
+    width: 500px;
+    height: 30px;
+    margin: 10px auto;
+  }
+
+  & .form div button {
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    color: white;
+    background-color: $iconColor;
+    position: relative;
+    top: 20%;
+    left: 40%;
+  }
+}
+.courses-header {
+  text-align: center;
+}

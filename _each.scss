@@ -1,0 +1,23 @@
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  .my-#{$space} {
+    margin: #{$space}px;
+  }
+  .my-#{$space} {
+    margin: #{$space}px;
+    padding: 5px;
+  }
+  .my-#{$space} {
+    margin: #{$space}px;
+    padding: 5px;
+  }
+  .my-#{$space} {
+    margin: #{$space}px;
+    padding: 5px;
+  }
+  .my-#{$space} {
+    margin: #{$space}px;
+    padding: 5px;
+  }
+}
